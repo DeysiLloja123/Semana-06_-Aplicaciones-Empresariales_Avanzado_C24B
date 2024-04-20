@@ -1,0 +1,86 @@
+﻿<Window x:Class="Semana_06.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Semana_06"
+        mc:Ignorable="d"
+                Title="MainWindow" Height="510" Width="1500">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+            <StackPanel HorizontalAlignment="Left" >
+                <Label>Ingresa Id Empleado</Label>
+                <TextBox x:Name="txtIdEmpleado" Margin="2" />
+
+                <Label>Ingresa Apellidos</Label>
+                <TextBox x:Name="txtApellidos" Margin="2"/>
+
+                <Label>Ingresa Nombre</Label>
+                <TextBox x:Name="txtNombre" Margin="2"/>
+
+                <Label>Ingresa Cargo</Label>
+                <TextBox x:Name="txtCargo" Margin="2"/>
+
+                <Label>Ingresa Tratamiento</Label>
+                <TextBox x:Name="txtTratamiento" Margin="2" />
+
+                <Label>Selecciona Fecha de Nacimiento</Label>
+                <DatePicker x:Name="dpFechaNacimiento" Margin="2"/>
+
+                <Label>Selecciona Fecha de Contratación</Label>
+                <DatePicker x:Name="dpFechaContratacion" Margin="2"/>
+
+                <Label>Ingresa Dirección</Label>
+                <TextBox x:Name="txtDireccion" Margin="2" />
+                <Label>Ingresa Ciudad</Label>
+                <TextBox x:Name="txtCiudad" Margin="2" />
+
+
+            </StackPanel>
+            <StackPanel>
+                <Label>Ingresa Región</Label>
+                <TextBox x:Name="txtRegion" Margin="2"/>
+
+                <Label>Ingresa Código Postal</Label>
+                <TextBox x:Name="txtCodPostal" Margin="2"/>
+
+                <Label>Ingresa País</Label>
+                <TextBox x:Name="txtPais" Margin="2" />
+
+                <Label>Ingresa Teléfono Domicilio</Label>
+                <TextBox x:Name="txtTelDomicilio" Margin="2" />
+
+                <Label>Ingresa Extensión</Label>
+                <TextBox x:Name="txtExtension" Margin="2"/>
+
+                <Label>Ingresa Notas</Label>
+                <TextBox x:Name="txtNotas" Margin="2" />
+
+                <Label>Ingresa Jefe</Label>
+                <TextBox x:Name="txtJefe" Margin="2" />
+
+                <Label>Ingresa Sueldo Básico</Label>
+                <TextBox x:Name="txtSueldoBasico" Margin="2"/>
+
+                <Button Content="GRABAR" Click="InsertarEmpleado_Click" Width="200" Margin="2"/>
+            </StackPanel>
+            <StackPanel>
+
+                <Button Margin="2" Click="Button_Click" Width="200">Listar Empleados</Button>
+
+                <ScrollViewer  Width="500" Height="350" >
+                    <DataGrid 
+                       x:Name="resultGrid" 
+                        Margin="2"  SelectionChanged="resultGrid_SelectionChanged">
+                    </DataGrid>
+                </ScrollViewer>
+
+                <Button Content="Actualizar" Click="ActualizarEmpleado_Click" Width="200" Margin="2"/>
+                <Button Content="Eliminar" Click="EliminarEmpleado_Click" Width="200" Margin="2"/>
+
+
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window> 
